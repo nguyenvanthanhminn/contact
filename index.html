@@ -41,13 +41,13 @@
   <aside class="socialNetworkNavBar">
     <div class="socialNetworkNav"> 
       <!-- Add a Anchor tag with nested img tag here --> 
-      <img id="facebook" @click="openf" class="social" src="../../../../Documents/Unnamed Site 2/facebook.svg" alt="sample"> </div>
+      <img id="facebook" @click="openf" class="social" :src="url" alt="sample"> </div>
     <div class="socialNetworkNav"> 
       <!-- Add a Anchor tag with nested img tag here --> 
-      <img id="ins" @click="openi" class="social" src="../../../../Documents/Unnamed Site 2/instagram.svg"  alt="sample"> </div>
+      <img id="ins" @click="openi" class="social" :src="url"  alt="sample"> </div>
     <div class="socialNetworkNav"> 
       <!-- Add a Anchor tag with nested img tag here --> 
-      <img id="github" @click="openg" class="social" src="../../../../Documents/Unnamed Site 2/github.svg"  alt="sample"> </div>
+      <img id="github" @click="openg" class="social" :src="url"  alt="sample"> </div>
   </aside>
 </header>
 <!-- content -->
@@ -89,6 +89,9 @@
 	});
 	var face= new Vue({
 		el: '#facebook',
+		data:{
+			url: "https://nguyenvanthanhminn.github.io/contact/facebook.svg"
+		},
 		methods:{
 			openf: function(){
 				open("https://www.facebook.com/miktae.7","_blank");
@@ -97,6 +100,9 @@
 	});
 	var ins= new Vue({
 		el: '#ins',
+		data:{
+			url: "https://nguyenvanthanhminn.github.io/contact/instagram.svg"
+		},
 		methods:{
 			openi: function(){
 				open("https://www.instagram.com/mik_tae_7","_blank");
@@ -105,6 +111,9 @@
 	});
 	var github= new Vue({
 		el: '#github',
+		data:{
+			url: "https://nguyenvanthanhminn.github.io/contact/github.svg"
+		},
 		methods:{
 			openg: function(){
 				open("https://www.nguyenvanthanhminn.github.io","_blank");
